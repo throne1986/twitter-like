@@ -1,0 +1,178 @@
+.main-block {
+  background: linear-gradient(to bottom, #183C5F 0%, #183C5F 22%, rgba(0, 0, 0, 0) 22%);
+  padding-top: 40px;
+  border: 1px solid #ebe2e2;
+  max-width: 1000px;
+  padding: 56px 36px;
+
+  .profile_card {
+    background: #FFFFFF;
+    box-shadow: 0 0 8px 0 rgba(172, 172, 172, 0.50);
+    border-radius: 10px;
+  }
+
+  .profile_card-top {
+    display: flex;
+    padding: 34px;
+    color: #002C71;
+
+  }
+
+  .photo {
+    img {
+      border-radius: 300px;
+      width: 140px;
+      height: 140px;
+    }
+  }
+
+  .heart {
+    color: #D9D9D9;
+    font-size: 28px;
+    margin-left: 5px;
+  }
+
+  .details {
+    padding: 51px 38px;
+    position: relative;
+
+    h1 {
+
+      font-size: 36px;
+      color: #002C71;
+      letter-spacing: 0;
+      font-weight: 400;
+      line-height: 22px;
+    }
+
+    .city {
+      font-size: 24px;
+      color: #8298B9;
+      letter-spacing: 0;
+      position: absolute;
+      bottom: 24px;
+    }
+  }
+
+  .profile_card-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+
+    .likes,
+    .following,
+    .followers,
+    .follow {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .btn-follow {
+      background: #FFA640;
+      border-radius: 100px;
+      border: none;
+      height: 92px;
+      width: 268px;
+      font-size: 30px;
+      color: #FFFFFF;
+      font-weight: 600;
+      letter-spacing: 4.2px;
+      position: relative;
+      right: 37px;
+      top: 9px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .assets-count {
+
+      font-size: 48px;
+      color: #FFA640;
+      letter-spacing: 0;
+      font-weight: 400;
+    }
+
+    .assets-title {
+
+      font-size: 20px;
+      color: #343E00;
+      letter-spacing: 0;
+      line-height: 29px;
+    }
+  }
+
+  .comments {
+    padding: 45px 0px 0px 29px;
+    margin-top: 10px;
+
+    .comments-photo {
+      img {
+        border-radius: 300px;
+        width: 80px;
+        height: 80px
+      }
+    }
+
+    .comments_button {
+      border: none;
+      text-decoration: underline;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+      font-size: 28px;
+      color: #FFA640;
+      letter-spacing: 0;
+    }
+
+    .comments_count {
+      padding-left: 6px;
+    }
+  }
+
+  .comments-description {
+    display: flex;
+    flex-direction: row;
+    padding: 60px 8px;
+  }
+
+  .comments_details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+
+      font-size: 28px;
+      color: #002C71;
+      letter-spacing: 0;
+      font-weight: 400;
+      position: relative
+    }
+
+    .days {
+      padding-right: 19px;
+      opacity: 0.5;
+
+      font-size: 28px;
+      color: #002C71;
+      letter-spacing: 0;
+    }
+
+  }
+
+  .comments_wrapper {
+    padding: 20px;
+
+    .comments_text {
+      p {
+        font-size: 28px;
+        color: #444444;
+        letter-spacing: 0;
+        line-height: 48px;
+        width: 90%;
+      }
+    }
+  }
+}
