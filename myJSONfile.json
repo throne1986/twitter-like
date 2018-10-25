@@ -1,0 +1,32 @@
+{
+  "statuses": [
+    {
+      "likeID": 1,
+      "likes": 121,
+      "following": 723,
+      "followers": 4433
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Harvey Specter",
+      "lastName": "Specter",
+      "city": "New York USA"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et lig",
+      "postId": 1
+    }
+  ]
+}

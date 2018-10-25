@@ -6,13 +6,13 @@
           <img src="https://randomuser.me/api/portraits/men/84.jpg" alt="">
         </div>
         <div class="details">
-          <h1>Harvey Specter<span class="heart reaction"><i class="fa fa-heart heart" aria-hidden="true"></i></span></h1>
+          <h1>Harvey Specter<span class="heart reaction"><i class="fa fa-heart heart" aria-hidden="true"  (click)="dislikeButtonClick()"></i></span></h1>
           <span class="city">New York USA</span>
         </div>
       </div>
       <ul class="profile_card-bottom">
         <li class="likes">
-          <span class="assets-count">121</span>
+          <span class="assets-count">{{numberOflikes}}</span>
           <span class="assets-title">Likes</span>
         </li>
         <li class="following">
@@ -46,8 +46,12 @@
               <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. </p>
             </div>
       </div>
-      
     </div>
-
+    <hr class="comments_line">
+    <form class="add-comments">
+        <div class="form-group">
+          <textarea class="form-control" rows="1" placeholder="Add comments" id="comment"></textarea>
+        </div>
+      </form>
   </div>
 </div>

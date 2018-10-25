@@ -1,9 +1,11 @@
 .main-block {
-  background: linear-gradient(to bottom, #183C5F 0%, #183C5F 22%, rgba(0, 0, 0, 0) 22%);
+  background: linear-gradient(to bottom, #183C5F 0%, #183C5F 17%, rgba(0, 0, 0, 0) 17%);
+  border-radius: 5px 5px 0 0;
   padding-top: 40px;
   border: 1px solid #ebe2e2;
   max-width: 1000px;
-  padding: 56px 36px;
+  padding: 77px 36px;
+  margin-top: 60px;
 
   .profile_card {
     background: #FFFFFF;
@@ -16,6 +18,75 @@
     padding: 34px;
     color: #002C71;
 
+  }
+
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+
+    font-size: 36px;
+    color: #8298B9;
+    letter-spacing: 0;
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+
+    font-size: 36px;
+    color: #8298B9;
+    letter-spacing: 0;
+  }
+
+  textarea::-webkit-input-placeholder {
+    font-size: 36px;
+    color: #8298B9;
+  }
+
+  textarea:-moz-placeholder {
+    /* Firefox 36- */
+    font-size: 36px;
+    color: #8298B9;
+  }
+
+  textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 36px;
+    color: #8298B9;
+  }
+
+  textarea:-ms-input-placeholder {
+    font-size: 36px;
+    color: #8298B9;
+  }
+
+  ::placeholder {
+    /* Most modern browsers support this now. */
+
+    font-size: 36px;
+    color: #8298B9;
+    letter-spacing: 0;
+  }
+
+
+  hr.comments_line {
+    border: 1px solid #EBEBEB;
+    position: relative;
+    bottom: 62px;
+    left: -28px;
+  }
+
+  #comment {
+    border: none;
+    resize: none;
+    border-bottom: 2px solid #DBE0E8;
+    font-size: 30px;
+    overflow: hidden;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .add-comments {
+    padding-right: 28px;
   }
 
   .photo {
@@ -59,6 +130,22 @@
     justify-content: space-between;
     margin-bottom: 64px;
 
+    li::after{
+      transition: all 0.15s ease-in-out;
+      content: '';
+      display: block;
+      float: left;
+      background-color: #979797;
+      width: 1px;
+      opacity: 0.1;
+      height: 77px;
+      position: absolute;
+      bottom: 13px;
+      right: -57px;
+    }
+    li:nth-child(3n)::after{
+      display: none;
+    }
     .likes,
     .following,
     .followers,
@@ -98,7 +185,7 @@
       font-size: 20px;
       color: #343E00;
       letter-spacing: 0;
-      line-height: 29px;
+      line-height: 11px;
     }
   }
 
@@ -152,9 +239,8 @@
     }
 
     .days {
-      padding-right: 19px;
+      padding-right: 8px;
       opacity: 0.5;
-
       font-size: 28px;
       color: #002C71;
       letter-spacing: 0;
@@ -170,7 +256,7 @@
         font-size: 28px;
         color: #444444;
         letter-spacing: 0;
-        line-height: 48px;
+        line-height: 44px;
         width: 90%;
       }
     }
