@@ -7,10 +7,9 @@ import { Comment } from '../model/comments.model';
 })
 export class UserService {
    status: Status[];
-   numberOflikes = 0;
   constructor(private http: HttpClient) { }
   statusUrl = 'http://localhost:3000/statuses';
-  commentsUrl = 'http://localhost:3000/comment';
+  commentsUrl = 'http://localhost:3000/comments';
 
   getStatuses() {
     return this.http.get<Status[]>(this.statusUrl);
@@ -21,10 +20,5 @@ export class UserService {
   addComments(comment: Comment) {
     return this.http.post(this.commentsUrl, comment);
   }
-  likeButtonClick() {
-    this.numberOflikes++;
-  }
-  dislikeButtonClick() {
-    this.numberOflikes--;
-  }
+
 }

@@ -6,30 +6,30 @@
           <img src="https://randomuser.me/api/portraits/men/84.jpg" alt="">
         </div>
         <div class="details">
-          <h1>Harvey Specter<span class="heart reaction"><i class="fa fa-heart heart" aria-hidden="true"  (click)="dislikeButtonClick()"></i></span></h1>
+          <h1>Harvey Specter<span class="heart reaction"><i class="fa fa-heart heart" aria-hidden="true"  (click)="followButtonClick()"></i></span></h1>
           <span class="city">New York USA</span>
         </div>
       </div>
-      <ul class="profile_card-bottom">
+      <ul class="profile_card-bottom" *ngFor="let stat of status">
         <li class="likes">
-          <span class="assets-count">{{numberOflikes}}</span>
+          <span class="assets-count">{{stat.followers}}</span>
           <span class="assets-title">Likes</span>
         </li>
         <li class="following">
-          <span class="assets-count">723</span>
+          <span class="assets-count">{{numberOffollowing }}</span>
           <span class="assets-title">Following</span>
         </li>
         <li class="followers">
-          <span class="assets-count">4433</span>
+          <span class="assets-count">{{numberOffollowers}}</span>
           <span class="assets-title">Followers</span>
         </li>
         <li class="follow">
-          <button class="btn-follow">Follow</button>
+          <button class="btn-follow" (click)="followButtonClick()">Follow</button>
         </li>
       </ul>
     </div>
   </div>
-  <div class="comments card">
+  <div class="comments card " *ngFor="let comment of comments">
     <div class="commets_header">
       <button class="comments_button">Hide comments<span class="comments_count">(353)</span></button>
     </div>
@@ -39,18 +39,18 @@
       </div>
       <div class="comments_wrapper">
           <div class="comments_details">
-              <h1>Mike Ross</h1>
-              <span class="days">1d</span>
+              <h1>{{comment.author}}</h1>
+              <span class="days">{{comment.days}}</span>
             </div>
             <div class="comments_text">
-              <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. </p>
+              <p> </p>
             </div>
       </div>
     </div>
     <hr class="comments_line">
-    <form class="add-comments">
+    <form class="add-comments" [formGroup]="addForm" (keydown.enter)="addComments()">
         <div class="form-group">
-          <textarea class="form-control" rows="1" placeholder="Add comments" id="comment"></textarea>
+          <textarea class="form-control" rows="1" placeholder="Add comments" id="comment">{{comment.description}}</textarea>
         </div>
       </form>
   </div>

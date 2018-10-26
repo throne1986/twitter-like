@@ -13,6 +13,10 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class UserProfileComponent implements OnInit {
  status: Status[];
  comment: Comment[];
+ numberOflikes = 121;
+ numberOffollowing = 723;
+ numberOffollowers = 4433;
+
   constructor(private formBuilder: FormBuilder, private http: HttpClient, private userService: UserService) { }
 
   addForm: FormGroup;
@@ -20,16 +24,17 @@ export class UserProfileComponent implements OnInit {
   ngOnInit() {
     this.addForm = this.formBuilder.group({
       id: [],
-      title: ['', Validators.required],
+      name: ['', Validators.required],
+      city: ['', Validators.required],
       description: ['', Validators.required],
     });
-  }
+    this.userService.getStatuses()
+      .subscribe( data => {
+        this.status = data;
+        console.log(data);
+        console.log(this.status);
+      });
 
-  addStatus() {
-    this.userService.addStatus()
-    .subscribe(data => {
-      this.comment.push(this.addForm.value);
-    });
   }
 
   addComments() {
@@ -37,5 +42,14 @@ export class UserProfileComponent implements OnInit {
     .subscribe(data => {
       this.comment.push(this.addForm.value);
     });
+  }
+  followButtonClick(statusId) {
+    const statusToUpdate = this.status.filter(status => status.statusId === statusId)[0];
+    statusToUpdate.followers++;
+    this.persistStatus(statusToUpdate);
+  }
+  persistStatus(status) {
+    this.userService.addStatus(status);
+    console.log(status);
   }
 }

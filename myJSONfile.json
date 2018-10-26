@@ -1,7 +1,8 @@
 {
   "statuses": [
     {
-      "likeID": 1,
+      "id": 1,
+      "statusId": 2,
       "likes": 121,
       "following": 723,
       "followers": 4433
@@ -10,9 +11,9 @@
   "users": [
     {
       "id": 1,
-      "firstName": "Harvey Specter",
-      "lastName": "Specter",
-      "city": "New York USA"
+      "name": "Harvey Specter",
+      "city": "New York USA",
+      "days": "1d"
     }
   ],
   "posts": [
@@ -25,6 +26,7 @@
   "comments": [
     {
       "id": 1,
+      "authour": "Michael Ross",
       "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et lig",
       "postId": 1
     }
