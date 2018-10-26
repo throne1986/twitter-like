@@ -44,12 +44,23 @@ export class UserProfileComponent implements OnInit {
     });
   }
   followButtonClick(statusId) {
-    const statusToUpdate = this.status.filter(status => status.statusId === statusId)[0];
+    const statusToUpdate = this.status.filter(status => status.id === statusId)[0];
     statusToUpdate.followers++;
+    statusToUpdate.following++;
     this.persistStatus(statusToUpdate);
-  }
-  persistStatus(status) {
-    this.userService.addStatus(status);
-    console.log(status);
-  }
+    }
+
+    likesButtonClick(statusId) {
+      const statusToUpdate = this.status.filter(status => status.id === statusId)[0];
+      statusToUpdate.like++;
+      this.persistStatus(statusToUpdate);
+      }
+
+      persistStatus(status) {
+        this.userService.updateStatus(status)
+        .subscribe(data => {
+        this.status = [status];
+        });
+      }
+
 }

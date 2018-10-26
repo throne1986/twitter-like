@@ -15,10 +15,13 @@ export class UserService {
     return this.http.get<Status[]>(this.statusUrl);
   }
   addStatus(status: Status) {
-   return this.http.patch(this.statusUrl, status);
+   return this.http.put(this.statusUrl, status);
   }
   addComments(comment: Comment) {
     return this.http.post(this.commentsUrl, comment);
+  }
+updateStatus(status: Status) {
+  return this.http.put(this.statusUrl + '/' + status.id, status);
   }
 
 }

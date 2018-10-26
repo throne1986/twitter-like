@@ -5,8 +5,8 @@
         <div class="photo">
           <img src="https://randomuser.me/api/portraits/men/84.jpg" alt="">
         </div>
-        <div class="details">
-          <h1>Harvey Specter<span class="heart reaction"><i class="fa fa-heart heart" aria-hidden="true"  (click)="  followButtonClick(status.id)"></i></span></h1>
+        <div class="details" *ngFor="let stat of status">
+          <h1>Harvey Specter<span class="heart reaction"><i class="fa fa-heart heart" aria-hidden="true"  (click)="likesButtonClick(stat.id)"></i></span></h1>
           <span class="city">New York USA</span>
         </div>
       </div>
@@ -24,7 +24,7 @@
           <span class="assets-title">Followers</span>
         </li>
         <li class="follow">
-          <button class="btn-follow" (click)="  followButtonClick(status.id)">Follow</button>
+          <button class="btn-follow" (click)="  followButtonClick(stat.id)">Follow</button>
         </li>
       </ul>
     </div>

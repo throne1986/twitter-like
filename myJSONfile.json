@@ -2,10 +2,10 @@
   "statuses": [
     {
       "id": 1,
-      "statusId": 2,
+      "statusId": 20,
       "likes": 121,
-      "following": 723,
-      "followers": 4433
+      "following": 727,
+      "followers": 4437
     }
   ],
   "users": [
