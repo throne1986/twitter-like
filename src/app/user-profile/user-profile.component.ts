@@ -72,7 +72,7 @@ export class UserProfileComponent implements OnInit {
     const minute = (mi < 10) ? '0' + mi : mi;
     const sc = date.getUTCSeconds();
     const second = (sc < 10) ? '0' + sc : sc;
-    const loctime = '${year}-${month}-${day}T${hour}:${minute}:${second}';
+    const loctime = `${year}-${month}-${day}T${hour}:${minute}:${second}`;
 
     this. addForm.get('localTime').setValue(loctime);
 
