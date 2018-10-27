@@ -1,16 +1,16 @@
 <div class="container main-block">
   <div class="profile">
-    <div class="profile_card card">
+    <div class="profile_card card" *ngFor="let stat of status">
       <div class="profile_card-top">
         <div class="photo">
           <img src="https://randomuser.me/api/portraits/men/84.jpg" alt="">
         </div>
-        <div class="details" *ngFor="let stat of status">
-          <h1>Harvey Specter<span class="heart reaction"><i class="fa fa-heart heart" aria-hidden="true"  (click)="likesButtonClick(stat.id)"></i></span></h1>
-          <span class="city">New York USA</span>
+        <div class="details">
+          <h1>{{stat.name}}<span class="heart reaction"><i class="fa fa-heart heart" aria-hidden="true" (click)="likesButtonClick(stat.id)"></i></span></h1>
+          <span class="city">{{stat.city}}</span>
         </div>
       </div>
-      <ul class="profile_card-bottom" *ngFor="let stat of status">
+      <ul class="profile_card-bottom">
         <li class="likes">
           <span class="assets-count">{{stat.likes}}</span>
           <span class="assets-title">Likes</span>
@@ -24,12 +24,14 @@
           <span class="assets-title">Followers</span>
         </li>
         <li class="follow">
-          <button class="btn-follow" (click)="  followButtonClick(stat.id)">Follow</button>
+          <button class="btn-follow" (click)="followButtonClick(stat.id)">Follow</button>
         </li>
       </ul>
     </div>
   </div>
-  <div class="comments card " *ngFor="let comment of comments">
+
+  <div class="comments-card card">
+  <div class="comments" *ngFor="let comment of comments"> 
     <div class="commets_header">
       <button class="comments_button">Hide comments<span class="comments_count">(353)</span></button>
     </div>
@@ -38,20 +40,26 @@
         <img src="https://randomuser.me/api/portraits/men/84.jpg" alt="">
       </div>
       <div class="comments_wrapper">
-          <div class="comments_details">
-              <h1>{{comment.author}}</h1>
-              <span class="days">{{comment.days}}</span>
-            </div>
-            <div class="comments_text">
-              <p> </p>
-            </div>
+        <div class="comments_details">
+          <h1>{{comment.username}}</h1>
+          <span class="days">{{comment.localTime | date:'dd.MM.yyyy H:mm'}}</span>
+        </div>
+        <div class="comments_text">
+          <p>{{comment.description}} </p>
+        </div>
       </div>
     </div>
-    <hr class="comments_line">
-    <form class="add-comments" [formGroup]="addForm" (keydown.enter)="addComments()">
-        <div class="form-group">
-          <textarea class="form-control" rows="1" placeholder="Add comments" id="comment">{{comment.description}}</textarea>
-        </div>
-      </form>
+    <hr class="comments_line" >
+  </div>
+  <form class="add-comments" [formGroup]="addForm" (keyup.enter)="addComments()">
+    <div class="form-group">
+        <input type="hidden" id="localTime" name="localTime" formControlName="localTime">
+    </div>
+    <div class="form-group">
+      
+      <textarea class="form-control" rows="1" placeholder="Add comments" formControlName="description" id="description"></textarea>
+    </div>
+  </form>
   </div>
 </div>
+

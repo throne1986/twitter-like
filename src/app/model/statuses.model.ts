@@ -1,7 +1,9 @@
 export class Status {
     id: number;
+    name: string;
+    city: string;
     statusId: number;
-    like: number;
+    likes: number;
     following: number;
     followers: number;
 }

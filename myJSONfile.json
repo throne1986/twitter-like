@@ -3,17 +3,21 @@
     {
       "id": 1,
       "statusId": 20,
-      "likes": 121,
-      "following": 727,
-      "followers": 4437
+      "likes": 142,
+      "following": 744,
+      "followers": 4454,
+      "name": "Harvey Specter",
+      "city": "New York USA",
+      "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et lig"
     }
   ],
   "users": [
     {
       "id": 1,
-      "name": "Harvey Specter",
+      "name": "Michael Ross",
       "city": "New York USA",
-      "days": "1d"
+      "days": "1d",
+      "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et lig"
     }
   ],
   "posts": [
@@ -23,12 +27,27 @@
       "author": "typicode"
     }
   ],
-  "comments": [
+  "comment": [
     {
       "id": 1,
-      "authour": "Michael Ross",
-      "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et lig",
-      "postId": 1
+      "username": "Michael Ross",
+      "city": "New York USA",
+      "localTime": "2018-01-01T00:00:00",
+      "task_id": 1,
+      "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et lig"
+    },
+    {
+      "id": 2,
+      "username": "Michael Ross",
+      "city": "New York USA",
+      "localTime": "2018-01-01T00:00:00",
+      "task_id": 1,
+      "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et lig"
+    },
+    {
+      "id": 3,
+      "localTime": null,
+      "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et lig\n"
     }
   ]
 }

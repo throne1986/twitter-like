@@ -1,5 +1,8 @@
 export class Comment {
     id: number;
-    authour: string;
+    username: string;
+    email: string;
+    days: number;
+    localTime: Date;
     description: string;
 }

@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~font-awesome/css/font-awesome.css";
 
+
+body,
+html {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
 *,
 ::after,
 ::before {
@@ -13,9 +19,6 @@ li {
   list-style-type: none;
 }
 
-body,
-html {
-  font-family: 'Montserrat', sans-serif !important;
+.btn:focus {
+  outline: none;
 }
-
-
