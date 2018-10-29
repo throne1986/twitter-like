@@ -27,30 +27,30 @@ export class UserProfileComponent implements OnInit {
       localTime: [],
       description: ['', Validators.required],
     });
-
+// get all statuses
     this.userService.getStatuses()
     .subscribe(data => {
       this.status = data;
       console.log(data);
     });
-
+// get all users
     this.userService.getUsers()
       .subscribe( data => {
         this.users = data;
         console.log(data);
       });
-      this.activeRouter.params.subscribe((params) => {
-        // tslint:disable-next-line:prefer-const
-        let id = params['id'];
+// get all comments
+    this.activeRouter.params.subscribe((params) => {
+        const id = params['id'];
         this.userService.getComments(id)
         .pipe(
           map(data => data.sort((a, b) => new Date(b.localTime).getTime() - new Date(a.localTime).getTime()))
         )
         .subscribe(data => this.comments = data);
-        });
+     });
   }
 
-
+// add comments to server
   addComments(task_id) {
     const formData = this.addForm.value;
     formData.task_id = task_id;
@@ -59,6 +59,7 @@ export class UserProfileComponent implements OnInit {
       this.comments.push(this.addForm.value);
       this.addForm.reset();
     });
+  // grab localtime
     const date = new Date();
     const d = date.getUTCDate();
     const day = (d < 10) ? '0' + d : d;
@@ -77,13 +78,14 @@ export class UserProfileComponent implements OnInit {
 
   }
 
-
+// creates likes counter for statuses
   likesButtonClick(statusId) {
     const statusToUpdate = this.status.filter(status => status.id === statusId)[0];
     statusToUpdate.likes++;
     this.persistStatus(statusToUpdate);
   }
 
+  // create follow counter for statuses
   followButtonClick(statusId) {
     const statusToUpdate = this.status.filter(status => status.id === statusId)[0];
     statusToUpdate.followers++;
@@ -91,6 +93,7 @@ export class UserProfileComponent implements OnInit {
     this.persistStatus(statusToUpdate);
   }
 
+//  updates statuses
   persistStatus(status) {
     this.userService.updateStatus(status)
       .subscribe(data => {

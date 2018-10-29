@@ -2,11 +2,11 @@
   <div class="profile">
     <div class="profile_card card" *ngFor="let stat of status">
       <div class="profile_btn-share">
-          <a href="http://localhost:4200/home" target="_blank" onclick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=1200'); return false">
-            <button type="button" class="btn-share"><img src="/assets/images/share-symbol.png">
+        <a href="http://localhost:4200/home" target="_blank" onclick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=1200'); return false">
+          <button type="button" class="btn-share"><img src="/assets/images/share-symbol.png">
           </button>
         </a>
-      </div> 
+      </div>
       <div class="profile_card-top">
         <div class="photo">
           <img src="https://randomuser.me/api/portraits/men/84.jpg" alt="">
@@ -40,7 +40,7 @@
     <div class="comments">
       <div class="commets_header">
         <button class="comments_button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
-          aria-controls="collapseExample">Hide comments<span class="comments_count">({{comments.length}})</span></button>
+          aria-controls="collapseExample">Hide comments<span class="comments_count">({{comments?.length}})</span></button>
       </div>
       <div class="wraper" [ngbCollapse]="isCollapsed">
         <div class="comments-description" *ngFor="let comment of comments">
@@ -63,7 +63,7 @@
     <form class="add-comments" [formGroup]="addForm" (keyup.enter)="addComments()">
       <input type="hidden" id="localTime" name="localTime" formControlName="localTime">
       <div class="form-group">
-        <textarea class="form-control" rows="1" placeholder="Add comments" formControlName="description" id="description" ></textarea>
+        <textarea class="form-control" rows="1" placeholder="Add comments" formControlName="description" id="description"></textarea>
       </div>
     </form>
   </div>

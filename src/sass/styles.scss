@@ -1,35 +1,36 @@
 /*-------------
  	General
 -------------*/
+
 @import "partials/_breakpoints";
 @import "partials/_variables";
 @import "partials/_profile.scss";
-
 @import "~font-awesome/css/font-awesome.css";
-
-html, body{
-	font: normal 16px $base-font;
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	overflow-x: hidden;
+html,
+body {
+    font: normal 16px $base-font;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
+
 *,
 *:before,
 *:after {
-	-webkit-box-sizing: inherit;
-	box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 ul,
 li {
-  list-style: none;
-  list-style-type: none;
+    list-style: none;
+    list-style-type: none;
 }
 
 .btn:focus {
-  outline: none;
+    outline: none;
 }
