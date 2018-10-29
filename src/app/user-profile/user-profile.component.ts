@@ -31,13 +31,11 @@ export class UserProfileComponent implements OnInit {
     this.userService.getStatuses()
     .subscribe(data => {
       this.status = data;
-      console.log(data);
     });
 // get all users
     this.userService.getUsers()
       .subscribe( data => {
         this.users = data;
-        console.log(data);
       });
 // get all comments
     this.activeRouter.params.subscribe((params) => {
