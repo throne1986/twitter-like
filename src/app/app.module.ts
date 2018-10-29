@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import {HttpClientModule} from '@angular/common/http';
 import { UserService } from './service/user.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MomentModule } from 'ngx-moment';
 
 @NgModule({
   declarations: [
@@ -17,8 +20,11 @@ import { UserService } from './service/user.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbModule,
     BrowserModule,
+    MomentModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     BrowserModule,
     HttpModule,
     FormsModule,

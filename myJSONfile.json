@@ -3,9 +3,9 @@
     {
       "id": 1,
       "statusId": 20,
-      "likes": 143,
-      "following": 745,
-      "followers": 4455,
+      "likes": 123,
+      "following": 726,
+      "followers": 4436,
       "name": "Harvey Specter",
       "city": "New York USA",
       "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et lig"
@@ -14,42 +14,22 @@
   "users": [
     {
       "id": 1,
-      "name": "Michael Ross",
+      "name": "Mike Ross",
       "city": "New York USA",
       "days": "1d",
       "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et lig"
     }
   ],
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
   "comment": [
     {
-      "id": 1
+      "id": 1,
+      "localTime": "2018-10-28T21:05:04.557Z",
+      "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.\n"
     },
     {
       "id": 2,
-      "localTime": null,
-      "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et lig\n"
-    },
-    {
-      "id": 3,
-      "localTime": null,
-      "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et lig\n"
-    },
-    {
-      "id": 4,
-      "localTime": null,
-      "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et lig\n"
-    },
-    {
-      "id": 5,
-      "localTime": null,
-      "description": "dvds\n"
+      "localTime": "2018-10-28T21:06:36.476Z",
+      "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.\n"
     }
   ]
 }

@@ -6,12 +6,12 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { User } from '../model/user.model';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
-
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.scss']
 })
+
 export class UserProfileComponent implements OnInit {
   users: User[];
   status: Status[];
@@ -22,8 +22,6 @@ export class UserProfileComponent implements OnInit {
   addForm: FormGroup;
 
   ngOnInit() {
-
-
     this.addForm = this.formBuilder.group({
       id: [],
       localTime: [],
@@ -50,8 +48,8 @@ export class UserProfileComponent implements OnInit {
         )
         .subscribe(data => this.comments = data);
         });
-
   }
+
 
   addComments(task_id) {
     const formData = this.addForm.value;
@@ -59,6 +57,7 @@ export class UserProfileComponent implements OnInit {
     this.userService.addComments(formData)
     .subscribe(data => {
       this.comments.push(this.addForm.value);
+      this.addForm.reset();
     });
     const date = new Date();
     const d = date.getUTCDate();
@@ -72,7 +71,7 @@ export class UserProfileComponent implements OnInit {
     const minute = (mi < 10) ? '0' + mi : mi;
     const sc = date.getUTCSeconds();
     const second = (sc < 10) ? '0' + sc : sc;
-    const loctime = `${year}-${month}-${day}T${hour}:${minute}:${second}`;
+    const loctime = `${year}-${month}-${day}T${hour}`;
 
     this. addForm.get('localTime').setValue(loctime);
 
