@@ -18,7 +18,9 @@ simple just follow  the following isntructions.
 
 3. `npm isntall`
 
-3. `json-server --watch myJSONfile.json`
+4. `json-server --watch myJSONfile.json`
+
+#Note: data are saved in a file named myJSONfile.json
 
  #Running front-end side
  
