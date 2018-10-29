@@ -1,0 +1,474 @@
+.main-block {
+    background: linear-gradient(to bottom, #183C5F 0%, #183C5F 190px, rgba(0, 0, 0, 0) 190px);
+    border-radius: 5px 5px 0 0;
+    padding-top: 40px;
+    border: 1px solid #ebe2e2;
+    max-width: 1000px !important;
+    padding: 77px 36px !important;
+    margin-top: 60px;
+    max-height: 1923px;
+    border-radius: $base-border-radius-size;
+    .profile_card {
+        background: #FFFFFF;
+        -webkit-box-shadow: 0 0 8px 0 rgba(172, 172, 172, 0.50);
+        box-shadow: 0 0 8px 0 rgba(172, 172, 172, 0.50);
+        border-radius: 10px;
+        .profile_btn-share {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            position: relative;
+            /* left: 12px; */
+            right: 12px;
+            top: 12px;
+            .btn-share {
+                border: none;
+                background: white;
+                cursor: pointer;
+            }
+        }
+    }
+    .profile_card-top {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 19px 38px;
+        color: $base-color;
+    }
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        font-size: $deskto-custom-font-size;
+        color: $input-color;
+        letter-spacing: 0;
+        position: relative;
+        top: -11px;
+        right: 9px;
+        font-weight: $base-font-weight;
+    }
+    ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        font-size: $deskto-custom-font-size;
+        color: $input-color;
+        letter-spacing: 0;
+        position: relative;
+        top: -11px;
+        right: 9px;
+        font-weight: $base-font-weight;
+    }
+    textarea::-webkit-input-placeholder {
+        font-size: $deskto-custom-font-size;
+        color: $input-color;
+        position: relative;
+        top: -11px;
+        right: 9px;
+        font-weight: $base-font-weight;
+    }
+    textarea:-ms-input-placeholder {
+        font-size: $deskto-custom-font-size;
+        color: $input-color;
+        position: relative;
+        top: -11px;
+        right: 9px
+    }
+    ::-webkit-input-placeholder {
+        /* Most modern browsers support this now. */
+        font-size: $deskto-custom-font-size;
+        color: $input-color;
+        letter-spacing: 0;
+        position: relative;
+        top: -11px;
+        right: 9px;
+        font-weight: $base-font-weight;
+    }
+    :-ms-input-placeholder {
+        /* Most modern browsers support this now. */
+        font-size: $deskto-custom-font-size;
+        color: $input-color;
+        letter-spacing: 0;
+        position: relative;
+        top: -11px;
+        right: 9px;
+        font-weight: $base-font-weight;
+    }
+    ::placeholder {
+        /* Most modern browsers support this now. */
+        font-size: $deskto-custom-font-size;
+        color: $input-color;
+        letter-spacing: 0;
+        position: relative;
+        top: -11px;
+        right: 9px;
+        font-weight: $base-font-weight;
+    }
+    /*
+    hr.comments_line {
+        border: 1px solid #EBEBEB;
+        position: relative;
+        bottom: 62px;
+        left: -$$desktop-base-font-size;
+    } */
+    #comment,
+    #description {
+        border: none;
+        resize: none;
+        border-bottom: 4px solid #DBE0E8;
+        font-size: 30px;
+        overflow: hidden;
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .add-comments {
+        padding: 47px;
+        margin-top: 23px;
+        border: 2px solid #EBEBEB;
+    }
+    .photo {
+        img {
+            border-radius: 300px;
+            width: 140px;
+            height: 140px;
+            position: relative;
+            top: -8px;
+        }
+    }
+    .heart {
+        color: #D9D9D9;
+        font-size: $desktop-base-font-size;
+        margin-left: 13px;
+        cursor: pointer;
+    }
+    .details {
+        padding: 35px 36px;
+        position: relative;
+        h1 {
+            font-size: $deskto-custom-font-size;
+            color: $base-color;
+            letter-spacing: 0;
+            font-weight: $base-font-weight;
+            line-height: 22px;
+        }
+        .city {
+            font-size: $custom-font-size;
+            color: $h1-span-color;
+            letter-spacing: 0;
+            position: absolute;
+            bottom: 37px;
+            font-weight: $base-font-weight;
+        }
+    }
+    .profile_card-bottom {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 18px 20px 0px;
+    }
+    li {
+        display: inline-flex;
+        flex: 1 1 auto;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-align-items: center;
+        align-items: center;
+        position: relative;
+        font-family: sans-serif;
+        padding: 0px 20px 20px 20px;
+    }
+    li:not(:last-child):after {
+        content: '';
+        display: block;
+        background-color: #ccc;
+        width: 1px;
+        opacity: 1;
+        margin: 0 auto;
+        height: 100%;
+        position: absolute;
+        right: 0;
+    }
+    li span {
+        display: flex;
+        flex: 1 100%;
+        justify-content: center;
+    }
+    li:nth-child(3n)::after {
+        display: none;
+    }
+    li:nth-child(4n)::after {
+        display: none;
+    }
+    .btn-follow {
+        background: $button-color;
+        border-radius: 50px;
+        border: none;
+        outline: none;
+        font-size: 30px;
+        letter-spacing: 1px;
+        color: $base-custom-color;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: flex;
+        flex: 1 80%;
+        justify-content: center;
+        padding: 7px 15px;
+        margin: 0 3px;
+        height: 92px;
+        width: 268px;
+    }
+    .assets-count {
+        font-size: $max-base-font;
+        color: $li-span-color;
+        letter-spacing: 0;
+        font-weight: 400;
+    }
+    .assets-title {
+        font-size: $asset-font-size;
+        color: $h1-span-color;
+        letter-spacing: 0;
+        font-weight: 200;
+    }
+    .comments-card {
+        margin: $custom-font-size -2px;
+        -webkit-box-shadow: 0 0 4px 0 rgba(172, 172, 172, 0.50);
+        box-shadow: 0 0 4px 0 rgba(172, 172, 172, 0.50);
+        border-radius: $base-border-radius-size;
+        z-index: 0;
+    }
+    .comments {
+        padding: 45px 0px 0px 29px;
+        .wraper {
+            overflow: auto;
+            max-height: 1344px;
+        }
+        .comments-photo {
+            img {
+                border-radius: 300px;
+                width: 80px;
+                height: 80px;
+                position: relative;
+                top: 37px;
+            }
+        }
+        .comments_button {
+            border: none;
+            text-decoration: underline;
+            border: none;
+            background-color: white;
+            cursor: pointer;
+            font-size: $desktop-base-font-size;
+            color: $button-color;
+            letter-spacing: 0;
+            outline: none;
+            cursor: pointer;
+        }
+        .comments_count {
+            padding-left: 6px;
+        }
+    }
+    .comments-description {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        padding: 23px 0px;
+        border-bottom: 2px solid #EBEBEB;
+    }
+    .comments_details {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin-top: 27px;
+        h1 {
+            font-size: $desktop-base-font-size;
+            color: $base-color;
+            letter-spacing: 0;
+            font-weight: 400;
+            position: relative
+        }
+        .days {
+            opacity: 0.5;
+            font-size: $desktop-base-font-size;
+            color: $base-color;
+            letter-spacing: 0;
+            margin-bottom: 10px;
+        }
+    }
+    .comments_wrapper {
+        padding: 32px 21px;
+        .comments_text {
+            position: relative;
+            p {
+                font-size: $desktop-base-font-size;
+                color: $paragraph-color;
+                letter-spacing: 0;
+                line-height: 44px;
+                width: 90%;
+            }
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: $screen-xs-max) {
+    .main-block {
+        .details {
+            h1 {
+                font-size: $ipads-base-font-size;
+                white-space: nowrap;
+            }
+            .city {
+                font-size: $xtra-smal-devices-font-size;
+            }
+            .heart img {
+                width: $xtra-smal-devices-font-size;
+            }
+        }
+        .profile_card-bottom {
+            padding: 0px;
+            .assets-title {
+                font-size: $xtra-small-font;
+            }
+            .assets-count {
+                font-size: $custom-font-size;
+            }
+            .btn-follow {
+                height: 46px;
+                width: 100% !important;
+                font-size: $mobile-base-font-size;
+                right: 0px;
+            }
+        }
+        .comments {
+            padding: 45px 0px 0px 0px;
+            .commets_header {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+            .comments-description {
+                padding: 0px;
+                left: 0px;
+                margin-left: 20px;
+            }
+            .comments_wrapper {
+                padding: 16px 21px;
+                .comments_text {
+                    p {
+                        font-size: $mobile-base-font-size;
+                        line-height: 21px;
+                    }
+                    .days {
+                        font-size: $mobile-base-font-size;
+                    }
+                }
+            }
+            .comments_details {
+                h1,
+                .days {
+                    font-size: $mobile-base-font-size;
+                }
+            }
+            .comments-photo img {
+                width: 40px;
+                height: 40px;
+            }
+            .comments_button {
+                font-size: $mobile-base-font-size;
+            }
+        }
+        #description {
+            font-size: $xtra-small-font;
+        }
+    }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: $screen-xs-max) {
+    .main-block {
+        textarea::-webkit-input-placeholder {
+            font-size: $ipads-base-font-size;
+            white-space: nowrap;
+        }
+        textarea:-ms-input-placeholder {
+            font-size: $ipads-base-font-size;
+            white-space: nowrap;
+        }
+        textarea::placeholder {
+            font-size: $ipads-base-font-size;
+            white-space: nowrap;
+        }
+        .details {
+            margin-bottom: 35px;
+            .city {
+                bottom: 0px;
+            }
+        }
+        .profile_card-top {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-top: -130px;
+        }
+        .profile_card-bottom {
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding-bottom: 20px;
+            li::after {
+                bottom: -7px;
+            }
+            li:nth-child(3n)::after {
+                display: none;
+            }
+            .btn-follow {
+                position: relative;
+                top: 40px;
+            }
+        }
+        .likes,
+        .following,
+        .followers,
+        .follow {
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            width: 33%;
+        }
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) {
+    .btn-follow {
+        width: 92%;
+    }
+}
+

@@ -2,7 +2,7 @@
   <div class="profile">
     <div class="profile_card card" *ngFor="let stat of status">
       <div class="profile_btn-share">
-          <a href="http://localhost:4200/home" target="_blank" onclick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=100%'); return false">
+          <a href="http://localhost:4200/home" target="_blank" onclick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=1200'); return false">
             <button type="button" class="btn-share"><img src="/assets/images/share-symbol.png">
           </button>
         </a>
@@ -40,7 +40,7 @@
     <div class="comments">
       <div class="commets_header">
         <button class="comments_button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
-          aria-controls="collapseExample">Hide comments<span class="comments_count">(353)</span></button>
+          aria-controls="collapseExample">Hide comments<span class="comments_count">({{comments.length}})</span></button>
       </div>
       <div class="wraper" [ngbCollapse]="isCollapsed">
         <div class="comments-description" *ngFor="let comment of comments">
@@ -50,7 +50,7 @@
           <div class="comments_wrapper">
             <div class="comments_details">
               <h1>Mike Ross</h1>
-              <span class="days">1d</span>
+              <span class="days">{{comment.localTime | amTimeAgo}}</span>
             </div>
             <div class="comments_text">
               <p>{{comment.description}} </p>
