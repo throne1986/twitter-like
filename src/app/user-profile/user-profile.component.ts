@@ -54,7 +54,7 @@ export class UserProfileComponent implements OnInit {
     formData.task_id = task_id;
     this.userService.addComments(formData)
     .subscribe(data => {
-      this.comments.push(this.addForm.value);
+      this.comments.unshift(this.addForm.value);
       this.addForm.reset();
     });
   // grab localtime

@@ -3,9 +3,9 @@
     {
       "id": 1,
       "statusId": 20,
-      "likes": 126,
-      "following": 729,
-      "followers": 4439,
+      "likes": 127,
+      "following": 730,
+      "followers": 4440,
       "name": "Harvey Specter",
       "city": "New York USA",
       "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et lig"
@@ -30,6 +30,11 @@
       "id": 2,
       "localTime": "2018-10-30T07:15:08.610Z",
       "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. \n"
+    },
+    {
+      "id": 3,
+      "localTime": "2018-10-30T08:37:23.642Z",
+      "description": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.\n"
     }
   ]
 }

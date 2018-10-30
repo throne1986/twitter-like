@@ -34,3 +34,6 @@ li {
 .btn:focus {
     outline: none;
 }
+.collapse:not(.show) {
+    display: none !important;
+}

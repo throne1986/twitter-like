@@ -37,11 +37,11 @@
   </div>
 
   <div class="comments-card card">
+    <div class="commets_header">
+      <button class="comments_button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
+        aria-controls="collapseExample">Hide comments<span class="comments_count">({{comments?.length}})</span></button>
+    </div>
     <div class="comments">
-      <div class="commets_header">
-        <button class="comments_button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
-          aria-controls="collapseExample">Hide comments<span class="comments_count">({{comments?.length}})</span></button>
-      </div>
       <div class="wraper" [ngbCollapse]="isCollapsed">
         <div class="comments-description" *ngFor="let comment of comments">
           <div class="comments-photo">
