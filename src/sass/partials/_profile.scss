@@ -276,7 +276,7 @@
         }
     }
     .comments {
-        padding: 45px 0px 0px 29px;
+        padding-right: 25px;
         max-height: 1344px;
         overflow: auto;
         .wraper {
@@ -382,11 +382,9 @@
                 width: 100% !important;
                 font-size: $mobile-base-font-size;
                 right: 0px;
-                cursor: pointer;
             }
         }
         .comments {
-            padding-right: 25px;
             .commets_header {
                 display: -webkit-box;
                 display: -ms-flexbox;
