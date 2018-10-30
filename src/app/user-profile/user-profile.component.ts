@@ -87,7 +87,6 @@ export class UserProfileComponent implements OnInit {
   followButtonClick(statusId) {
     const statusToUpdate = this.status.filter(status => status.id === statusId)[0];
     statusToUpdate.followers++;
-    statusToUpdate.following++;
     this.persistStatus(statusToUpdate);
   }
 

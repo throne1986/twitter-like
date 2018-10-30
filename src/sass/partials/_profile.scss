@@ -238,6 +238,7 @@
         margin: 0 3px;
         height: 92px;
         width: 268px;
+        cursor: pointer;
     }
     .assets-count {
         font-size: $max-base-font;
@@ -307,6 +308,7 @@
         -ms-flex-direction: row;
         flex-direction: row;
         border-bottom: 2px solid #EBEBEB;
+        padding: 45px 0px 0px 29px;
     }
     .comments_details {
         display: -webkit-box;
@@ -380,10 +382,11 @@
                 width: 100% !important;
                 font-size: $mobile-base-font-size;
                 right: 0px;
+                cursor: pointer;
             }
         }
         .comments {
-            padding: 45px 0px 0px 0px;
+            padding-right: 25px;
             .commets_header {
                 display: -webkit-box;
                 display: -ms-flexbox;
