@@ -405,7 +405,7 @@
                 margin-left: 20px;
             }
             .comments_wrapper {
-                padding: 16px 21px;
+                padding: 16px 0px 16px 11px;
                 -webkit-box-flex: 1;
                 -ms-flex: auto;
                 flex: auto;
@@ -450,7 +450,7 @@
         }
         textarea::placeholder {
             font-size: $ipads-base-font-size;
-            white-space: nowrap;
+             white-space: nowrap;
         }
         .details {
             margin-bottom: 35px;
